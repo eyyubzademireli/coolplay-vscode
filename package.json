@@ -1,0 +1,285 @@
+{
+  "name": "coolplay",
+  "displayName": "CoolPlay",
+  "description": "A cool VSCode extension with Status, Rules, and Comments sections",
+  "version": "1.0.0",
+  "publisher": "CPcode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CPcode/coolplay-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CPcode/coolplay-vscode/issues"
+  },
+  "homepage": "https://github.com/CPcode/coolplay-vscode#readme",
+  "icon": "icon.png",
+  "keywords": [
+    "productivity",
+    "file-management", 
+    "status-tracking",
+    "open-source"
+  ],
+  "private": false,
+  "preferGlobal": false,
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "SCM Providers"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "coolplay-explorer": [
+        {
+          "id": "coolplay-status",
+          "name": "Status",
+          "when": "coolplay:enabled"
+        },
+        {
+          "id": "coolplay-rules",
+          "name": "Rules",
+          "when": "coolplay:enabled"
+        },
+        {
+          "id": "coolplay-comments-pending",
+          "name": "Comments - Pending",
+          "when": "coolplay:enabled"
+        },
+        {
+          "id": "coolplay-comments-completed",
+          "name": "Comments - Completed",
+          "when": "coolplay:enabled"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "coolplay-explorer",
+          "title": "CoolPlay",
+          "icon": "$(zap)"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "coolplay.refreshStatus",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "coolplay.addRule",
+        "title": "Add Rule",
+        "icon": "$(add)"
+      },
+      {
+        "command": "coolplay.sortRules",
+        "title": "Sort Rules",
+        "icon": "$(sort-precedence)"
+      },
+      {
+        "command": "coolplay.refreshComments",
+        "title": "Refresh Comments",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "coolplay.filterComments",
+        "title": "Filter Comments",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "coolplay.toggleRule",
+        "title": "Toggle Rule",
+        "icon": "$(check)"
+      },
+      {
+        "command": "coolplay.editRule",
+        "title": "Edit Rule",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "coolplay.deleteRule",
+        "title": "Delete Rule",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "coolplay.refreshCommentsPending",
+        "title": "Refresh Pending Comments",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "coolplay.refreshCommentsCompleted",
+        "title": "Refresh Completed Comments",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "coolplay.filterCommentsPending",
+        "title": "Filter Pending Comments",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "coolplay.filterCommentsCompleted",
+        "title": "Filter Completed Comments",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "coolplay.setCompleted",
+        "title": "Set Completed",
+        "icon": "$(check)"
+      },
+      {
+        "command": "coolplay.returnBack",
+        "title": "Return Back",
+        "icon": "$(close)"
+      },
+      {
+        "command": "coolplay.filterRules",
+        "title": "Filter Rules",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "coolplay.setFileStatusDraft",
+        "title": "Mark as DRAFT",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "coolplay.setFileStatusOngoing",
+        "title": "Mark as ONGOING",
+        "icon": "$(clock)"
+      },
+      {
+        "command": "coolplay.setFileStatusDone",
+        "title": "Mark as DONE",
+        "icon": "$(check)"
+      },
+      {
+        "command": "coolplay.toggleFileStatus",
+        "title": "Toggle File Status",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "coolplay.setFileStatusDraftFromExplorer",
+        "title": "Mark as DRAFT"
+      },
+      {
+        "command": "coolplay.setFileStatusOngoingFromExplorer",
+        "title": "Mark as ONGOING"
+      },
+      {
+        "command": "coolplay.setFileStatusDoneFromExplorer",
+        "title": "Mark as DONE"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "coolplay.refreshStatus",
+          "when": "view == coolplay-status",
+          "group": "navigation"
+        },
+        {
+          "command": "coolplay.addRule",
+          "when": "view == coolplay-rules",
+          "group": "navigation@1"
+        },
+        {
+          "command": "coolplay.sortRules",
+          "when": "view == coolplay-rules",
+          "group": "navigation@2"
+        },
+        {
+          "command": "coolplay.filterRules",
+          "when": "view == coolplay-rules",
+          "group": "navigation@3"
+        },
+        {
+          "command": "coolplay.refreshComments",
+          "when": "view == coolplay-comments",
+          "group": "navigation@1"
+        },
+        {
+          "command": "coolplay.filterComments",
+          "when": "view == coolplay-comments",
+          "group": "navigation@2"
+        },
+        {
+          "command": "coolplay.refreshCommentsPending",
+          "when": "view == coolplay-comments-pending",
+          "group": "navigation@1"
+        },
+        {
+          "command": "coolplay.filterCommentsPending",
+          "when": "view == coolplay-comments-pending",
+          "group": "navigation@2"
+        },
+        {
+          "command": "coolplay.refreshCommentsCompleted",
+          "when": "view == coolplay-comments-completed",
+          "group": "navigation@1"
+        },
+        {
+          "command": "coolplay.filterCommentsCompleted",
+          "when": "view == coolplay-comments-completed",
+          "group": "navigation@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "coolplay.editRule",
+          "when": "view == coolplay-rules && viewItem == ruleItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "coolplay.deleteRule",
+          "when": "view == coolplay-rules && viewItem == ruleItem",
+          "group": "inline@2"
+        },
+        {
+          "command": "coolplay.setCompleted",
+          "when": "view == coolplay-comments-pending && viewItem == commentItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "coolplay.returnBack",
+          "when": "view == coolplay-comments-completed && viewItem == commentItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "coolplay.toggleFileStatus",
+          "when": "view == coolplay-status && viewItem == fileStatusItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "coolplay.setFileStatusDraft",
+          "when": "view == coolplay-status && viewItem == fileStatusItem",
+          "group": "status@1"
+        },
+        {
+          "command": "coolplay.setFileStatusOngoing",
+          "when": "view == coolplay-status && viewItem == fileStatusItem",
+          "group": "status@2"
+        },
+        {
+          "command": "coolplay.setFileStatusDone",
+          "when": "view == coolplay-status && viewItem == fileStatusItem",
+          "group": "status@3"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
