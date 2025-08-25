@@ -1,0 +1,36 @@
+# Compiled output - REMOVE this line to include compiled JS
+# out/
+
+# Source files - ADD this to exclude TS files
+src/**/*.ts
+tsconfig.json
+
+# Node modules
+node_modules/
+
+# Development files
+.vscode/
+.vscode-test/
+
+# Build files
+*.vsix
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm

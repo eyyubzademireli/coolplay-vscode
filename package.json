@@ -2,17 +2,17 @@
   "name": "coolplay",
   "displayName": "CoolPlay",
   "description": "A cool VSCode extension with Status, Rules, and Comments sections",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "publisher": "CPcode",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CPcode/coolplay-vscode.git"
+    "url": "https://github.com/eyyubzademireli/coolplay-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/CPcode/coolplay-vscode/issues"
+    "url": "https://github.com/eyyubzademireli/coolplay-vscode/issues"
   },
-  "homepage": "https://github.com/CPcode/coolplay-vscode#readme",
+  "homepage": "https://github.com/eyyubzademireli/coolplay-vscode#readme",
   "icon": "icon.png",
   "keywords": [
     "productivity",
