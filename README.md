@@ -12,7 +12,7 @@ CoolPlay is a comprehensive VS Code extension that enhances your development wor
 
 ### 📊 Status Management
 
-![Status Management Demo](https://raw.githubusercontent.com/eyyubzademireli/cp/Status.gif)
+![Status Management Demo](https://raw.githubusercontent.com/eyyubzademireli/coolplay-vscode/main/Status.gif)
 
 - **File Status Tracking**: Mark files as DRAFT, ONGOING, or DONE
 - **Visual Indicators**: Color-coded badges in the file explorer
@@ -20,7 +20,7 @@ CoolPlay is a comprehensive VS Code extension that enhances your development wor
 
 ### 📋 Rules System
 
-![Rules Management Demo](https://raw.githubusercontent.com/eyyubzademireli/cp/Rules.gif)
+![Rules Management Demo](https://raw.githubusercontent.com/eyyubzademireli/coolplay-vscode/main/Rules.gif)
 
 - **Global Rules**: Create rules that apply to all files in your workspace
 - **Local Rules**: File-specific rules for targeted guidance
@@ -28,7 +28,7 @@ CoolPlay is a comprehensive VS Code extension that enhances your development wor
 
 ### 💬 Comment Management
 
-![Comments Management Demo](https://raw.githubusercontent.com/eyyubzademireli/cp/Comment.gif)
+![Comments Management Demo](https://raw.githubusercontent.com/eyyubzademireli/coolplay-vscode/main/Comment.gif)
 
 - **Smart Detection**: Automatically finds TODO, REVIEW, NOTE, HACK, FIXME, BUG, OPTIMIZE and WARNING comments
 - **Real-time Updates**: Monitors file changes and updates comment list

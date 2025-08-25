@@ -2,7 +2,7 @@
   "name": "coolplay",
   "displayName": "CoolPlay",
   "description": "A cool VSCode extension with Status, Rules, and Comments sections",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "publisher": "CPcode",
   "license": "MIT",
   "repository": {
